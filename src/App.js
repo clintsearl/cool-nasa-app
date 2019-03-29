@@ -31,7 +31,7 @@ class App extends Component {
     // moment(this.state.date).format('YYYY-MM-DD'
 
     getPhoto = async date => {
-      if( moment().isBefore(moment()) ){
+      if( moment(date).isBefore(moment()) ){
       await fetch(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=7B7uLHwCUN5ZJuyoncmo6naDl7gNE3rOug3slTL7`)
       .then(response => response.json())
       .then(requested => this.setState({photo: requested}))
