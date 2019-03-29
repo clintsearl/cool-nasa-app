@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import moment from 'moment'
+//components
 import DateInput from './components/DateInput'
 import Photo from './components/Photo'
 
@@ -7,29 +9,44 @@ import Photo from './components/Photo'
 
 class App extends Component {
   state ={
-    date: '',
+    date:'',
     photo:''
   }
-
-  changeDate = e => {
-    e.preventDefault()
-    let dateFromInput = e.target[0].value
-    this.setState({date: dateFromInput})
-    this.getPhoto(dateFromInput)
-    }
+ 
 
     componentDidMount(){
       fetch ('https://api.nasa.gov/planetary/apod?api_key=7B7uLHwCUN5ZJuyoncmo6naDl7gNE3rOug3slTL7')
       .then(response => response.json())
       .then(json => this.setState({photo: json}))
     }
-    getPhoto = date => {
-      fetch('https://api.nasa.gov/planetary/apod?date=${date}&api_key=7B7uLHwCUN5ZJuyoncmo6naDl7gNE3rOug3slTL7')
+    
+      //   formatDate = date =>{
+      //     if (date){
+      //     let year = date.year()
+      //     let month = date.month()+ 1
+      //     let day = date.day()
+      //     return `${year}-${month}-${day}`
+      //   }
+      // }
+    // moment(this.state.date).format('YYYY-MM-DD'
+
+    getPhoto = async date => {
+      
+      await fetch(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=7B7uLHwCUN5ZJuyoncmo6naDl7gNE3rOug3slTL7`)
       .then(response => response.json())
       .then(requested => this.setState({photo: requested}))
     }
 
+    changeDate = dateFromInput => {
+        // console.log('date from input', dateFromInput)
+        let formatted =moment(dateFromInput).format('YYYY-MM-DD')
+        console.log("formated date", formatted)
+      this.setState({date: formatted})
+      this.getPhoto(formatted)
+      }
+
   render() {
+    console.log(moment().format('YYYY-MM-DD'))
     return (
       <div className="App">
         <header className="App-header">
