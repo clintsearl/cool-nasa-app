@@ -52,10 +52,10 @@ class App extends Component {
     console.log(moment().format('YYYY-MM-DD'))
     return (
       <div className="App">
+      
         <header className="App-header">
          <DateInput changeDate={this.changeDate}
-         date={this.state.date}/>
-         
+         date={this.state.date}/> 
         </header>
         <Photo photo={this.state.photo} />
       </div>

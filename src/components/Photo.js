@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+
 const Photo = (props)=>(
       <div>
           <h2>{props.photo.title}</h2>

@@ -6,6 +6,7 @@ import "react-datepicker/dist/react-datepicker.css"
 
 const DateInput = props => (
       <div>
+        <p class ='label'>Select a date</p>
           <DatePicker 
           selected = {props.date}
           onChange = {props.changeDate}
