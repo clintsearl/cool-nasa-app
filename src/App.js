@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import moment from 'moment'
+// const momentRandom = require('moment-random')
 //components
 import DateInput from './components/DateInput'
 import Photo from './components/Photo'
@@ -52,7 +53,7 @@ class App extends Component {
     console.log(moment().format('YYYY-MM-DD'))
     return (
       <div className="App">
-      
+
         <header className="App-header">
          <DateInput changeDate={this.changeDate}
          date={this.state.date}/> 
