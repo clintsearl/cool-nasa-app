@@ -1,3 +1,10 @@
+# Cool Nasa App
+   Check it out hosted on Heroku, (https://cool-nasa-app.herokuapp.com)
+  *It's sleeping on heroku now, it'll wake up in a few seconds....*
+       
+As the name implies this is a *cool app* That pulls from Nasa's picture of the day API! So Everyday you can see their Featured image and you can go back to featured images from the past. Yes only the past, go ahead and try to see tomorrow or next week's picture.
+Created with React and I used React Date picker (https://www.npmjs.com/package/react-datepicker) which is a npm package that made the interface more user friendly and looking great.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
