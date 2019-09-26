@@ -3,21 +3,27 @@
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  
+  background: #e6e4e493
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #0b3d91;
   min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fc3d21;
 }
 
-/* Photo{
+ /* Photo{
   display: flex;
-  background-color: #9c9c9c
-} */
+  background-color: #9c9c9c;
+    img {
+       resize-mode:contain; 
+      max-width:"94%";
+      resizeMethod:scale;
+      border:10px groove; 
+    }
+    } */
